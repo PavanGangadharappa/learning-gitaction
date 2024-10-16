@@ -20,10 +20,8 @@ jobs:
       - name: Run Shell Script
         working-directory: ./scripts  # Change to the directory containing the script if needed
         run: |
-          chmod +x script.sh
-          ./script.sh 
-          chmod +x pavan.sh 
-          ./pavan.sh
+          chmod +x script.sh && chmod +x pavan.sh 
+          ./script.sh && ./pavan.sh
 
       # Step 2: Set up Terraform
       - name: Set up Terraform
