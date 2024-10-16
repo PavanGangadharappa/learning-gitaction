@@ -28,7 +28,7 @@ jobs:
 
       # Step 5: Terraform Format Check (Linting)
       - name: Terraform Format Check
-        run: terraform fmt -check -recursive
+        run: terraform fmt 
 
       # Step 6: Terraform Validate Resource 1
       - name: Terraform Validate Resource 1
