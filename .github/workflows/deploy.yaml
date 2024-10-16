@@ -1,0 +1,24 @@
+name: Terraform Deployment
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on pushes to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull requests to the main branch
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Shell Script
+        working-directory: ./scripts  # Change to the directory containing the script if needed
+        run: |
+          chmod +x script.sh && chmod +x pavan.sh 
+          ./script.sh && ./pavan.sh
