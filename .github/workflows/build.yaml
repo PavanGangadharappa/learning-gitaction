@@ -17,6 +17,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Run Shell Script
+        working-directory: ./script  # Change to the directory containing the script if needed
+        run: |
+          chmod +x script.sh  # Make the script executable if not already
+          ./script.sh 
+
       # Step 2: Set up Terraform
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v2
